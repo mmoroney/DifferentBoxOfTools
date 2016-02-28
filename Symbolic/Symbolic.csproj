@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B1C8D52-9564-429C-AE36-1D0389155D25}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Symbolic</RootNamespace>
+    <AssemblyName>Symbolic</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algebra\CompositeSymbol.cs" />
+    <Compile Include="Algebra\Constant.cs" />
+    <Compile Include="Algebra\DoubleArgumentSymbol.cs" />
+    <Compile Include="Algebra\NaturalLogarithm.cs" />
+    <Compile Include="Algebra\SingleArgumentSymbol.cs" />
+    <Compile Include="Complex\Complex.cs" />
+    <Compile Include="Complex\ComplexSymbol.cs" />
+    <Compile Include="Functions.cs" />
+    <Compile Include="Manifold\ManifoldBase.cs" />
+    <Compile Include="Manifold\Manifold4.cs" />
+    <Compile Include="Manifold\Manifold3.cs" />
+    <Compile Include="Manifold\Manifold2.cs" />
+    <Compile Include="Matrix\Euclidean\EuclideanMatrixBase.cs" />
+    <Compile Include="Matrix\Lorentz\LorentzMatrixBase.cs" />
+    <Compile Include="Matrix\Lorentz\LorentzMatrixLL.cs" />
+    <Compile Include="Matrix\Lorentz\LorentzMatrixLU.cs" />
+    <Compile Include="Matrix\Lorentz\LorentzMatrixUL.cs" />
+    <Compile Include="Matrix\Lorentz\LorentzMatrixUU.cs" />
+    <Compile Include="Matrix\Lorentz\LorentzTransform.cs" />
+    <Compile Include="Matrix\Euclidean\EuclideanMatrix3.cs" />
+    <Compile Include="Matrix\Euclidean\EuclideanMatrix3Variable.cs" />
+    <Compile Include="Matrix\Euclidean\EuclideanMatrix2.cs" />
+    <Compile Include="Matrix\Euclidean\EuclideanMatrix2Variable.cs" />
+    <Compile Include="Matrix\Euclidean\EuclideanMatrix4.cs" />
+    <Compile Include="Matrix\Euclidean\EuclideanMatrix4Variable.cs" />
+    <Compile Include="Algebra\Power.cs" />
+    <Compile Include="Algebra\Product.cs" />
+    <Compile Include="Matrix\Matrix2\Matrix4Base.cs" />
+    <Compile Include="Matrix\Matrix2\Matrix4LL.cs" />
+    <Compile Include="Matrix\Matrix2\Matrix4LU.cs" />
+    <Compile Include="Matrix\Matrix2\Matrix4UL.cs" />
+    <Compile Include="Matrix\Matrix2\Matrix4UU.cs" />
+    <Compile Include="Matrix\Matrix3\Matrix4Base.cs" />
+    <Compile Include="Matrix\Matrix3\Matrix4LL.cs" />
+    <Compile Include="Matrix\Matrix3\Matrix4LU.cs" />
+    <Compile Include="Matrix\Matrix3\Matrix4UL.cs" />
+    <Compile Include="Matrix\Matrix3\Matrix4UU.cs" />
+    <Compile Include="Matrix\Matrix4\Matrix4Base.cs" />
+    <Compile Include="Matrix\Matrix4\Matrix4LL.cs" />
+    <Compile Include="Matrix\Matrix4\Matrix4LU.cs" />
+    <Compile Include="Matrix\Matrix4\Matrix4UL.cs" />
+    <Compile Include="Matrix\Matrix4\Matrix4UU.cs" />
+    <Compile Include="Matrix\MatrixBase.cs" />
+    <Compile Include="Matrix\MetricMatrixBase.cs" />
+    <Compile Include="Operators\CompositeOperator.cs" />
+    <Compile Include="Operators\Derivative.cs" />
+    <Compile Include="Operators\OperatorSymbol.cs" />
+    <Compile Include="Operators\Operator.cs" />
+    <Compile Include="Operators\OperatorProduct.cs" />
+    <Compile Include="Operators\OperatorSum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Algebra\Sum.cs" />
+    <Compile Include="Rational.cs" />
+    <Compile Include="Symbol.cs" />
+    <Compile Include="Tensor\LeviCivita.cs" />
+    <Compile Include="Tensor\Tensor4D2.cs" />
+    <Compile Include="Tensor\Tensor4D3.cs" />
+    <Compile Include="Tensor\Tensor4DBase.cs" />
+    <Compile Include="Tensor\Tensor4D4.cs" />
+    <Compile Include="Trigonometry\Cosine.cs" />
+    <Compile Include="Trigonometry\Sine.cs" />
+    <Compile Include="Utilities\ArrayUtilities.cs" />
+    <Compile Include="Utilities\IOperations.cs" />
+    <Compile Include="Utilities\MatrixUtilities.cs" />
+    <Compile Include="Utilities\OperatorOperations.cs" />
+    <Compile Include="Utilities\SymbolOperations.cs" />
+    <Compile Include="Utilities\VectorUtilities.cs" />
+    <Compile Include="Variable.cs" />
+    <Compile Include="Vector\Euclidean\EuclideanVectorBase.cs" />
+    <Compile Include="Vector\Lorentz\LorentzVectorBase.cs" />
+    <Compile Include="Vector\Lorentz\LorentzVectorOperatorL.cs" />
+    <Compile Include="Vector\Lorentz\LorentzVectorL.cs" />
+    <Compile Include="Vector\Euclidean\EuclideanVector2Base.cs" />
+    <Compile Include="Vector\Euclidean\EuclideanVector3Base.cs" />
+    <Compile Include="Vector\Euclidean\EuclideanVector4Base.cs" />
+    <Compile Include="Vector\Euclidean\EuclideanVector4Operator.cs" />
+    <Compile Include="Vector\Euclidean\EuclideanVector4.cs" />
+    <Compile Include="Vector\Euclidean\EuclideanVector4Variable.cs" />
+    <Compile Include="Vector\Lorentz\LorentzVectorOperatorU.cs" />
+    <Compile Include="Vector\Lorentz\LorentzVectorU.cs" />
+    <Compile Include="Vector\Lorentz\LorentzVectorVariableU.cs" />
+    <Compile Include="Matrix\Lorentz\MinkowskiMetric.cs" />
+    <Compile Include="Vector\Euclidean\EuclideanVector2Operator.cs" />
+    <Compile Include="Vector\Euclidean\EuclideanVector2.cs" />
+    <Compile Include="Vector\Euclidean\EuclideanVector2Variable.cs" />
+    <Compile Include="Vector\Euclidean\EuclideanVector3Operator.cs" />
+    <Compile Include="Vector\Euclidean\EuclideanVector3.cs" />
+    <Compile Include="Vector\Euclidean\EuclideanVector3Variable.cs" />
+    <Compile Include="Vector\MetricVectorBase.cs" />
+    <Compile Include="Vector\Vector2\Vector2Base.cs" />
+    <Compile Include="Vector\Vector2\Vector2L.cs" />
+    <Compile Include="Vector\Vector2\Vector2OperatorL.cs" />
+    <Compile Include="Vector\Vector2\Vector2OperatorU.cs" />
+    <Compile Include="Vector\Vector2\Vector2U.cs" />
+    <Compile Include="Vector\Vector2\Vector2VariableU.cs" />
+    <Compile Include="Vector\Vector3\Vector3Base.cs" />
+    <Compile Include="Vector\Vector3\Vector3L.cs" />
+    <Compile Include="Vector\Vector3\Vector3OperatorL.cs" />
+    <Compile Include="Vector\Vector3\Vector3OperatorU.cs" />
+    <Compile Include="Vector\Vector3\Vector3U.cs" />
+    <Compile Include="Vector\Vector3\Vector3VariableU.cs" />
+    <Compile Include="Vector\Vector4\Vector4L.cs" />
+    <Compile Include="Vector\Vector4\Vector4OperatorL.cs" />
+    <Compile Include="Vector\Vector4\Vector4OperatorU.cs" />
+    <Compile Include="Vector\Vector4\Vector4U.cs" />
+    <Compile Include="Vector\Vector4\Vector4Base.cs" />
+    <Compile Include="Vector\Vector4\Vector4VariableU.cs" />
+    <Compile Include="Vector\VectorBase.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
